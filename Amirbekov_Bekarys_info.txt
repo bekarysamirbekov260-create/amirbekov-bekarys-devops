@@ -1,0 +1,5 @@
+Name: Bekarys
+Surname: Amirbekov
+Group: IT2 2309
+Student ID: 37898
+Course: DevOps
