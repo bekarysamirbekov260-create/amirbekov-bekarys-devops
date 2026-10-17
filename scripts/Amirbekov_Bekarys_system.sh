@@ -1,0 +1,31 @@
+#!/bin/bash
+# System + student information script
+BASE_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+INFO_FILE="$BASE_DIR/Amirbekov_Bekarys_info.txt"
+
+echo "=============================="
+echo "Student Information"
+echo "=============================="
+echo
+echo "Name: Bekarys"
+echo "Surname: Amirbekov"
+echo "Group: IT2 2309"
+echo "Student ID: 37898"
+echo
+echo "=============================="
+echo "System Information"
+echo "=============================="
+echo
+echo "Username: $(whoami)"
+echo "Hostname: $(hostname)"
+echo "Current Date: $(date)"
+echo "Operating System: $(uname -sr)"
+echo "Disk Usage: $(df -h / | awk 'NR==2 {print $3 " used of " $2 " (" $5 ")"}')"
+echo "Memory Usage: $(free -h | awk '/^Mem:/ {print $3 " used of " $2}')"
+echo
+
+if [ -f "$INFO_FILE" ]; then
+  echo "Student information file exists."
+else
+  echo "Student information file does not exist."
+fi
