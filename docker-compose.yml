@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    image: amirbekov-bekarys-devops
+    container_name: amirbekov-bekarys-container
+    environment:
+      STUDENT_NAME: "Bekarys"
+      STUDENT_SURNAME: "Amirbekov"
+      STUDENT_GROUP: "IT2 2309"
+      STUDENT_ID: "37898"
+    ports:
+      - "8081:8080"
